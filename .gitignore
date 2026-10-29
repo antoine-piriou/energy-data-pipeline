@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Données brutes (jamais sur GitHub)
+data/raw/*
+!data/raw/.gitkeep
+*.csv
