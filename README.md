@@ -25,8 +25,8 @@ Download them into `data/`, with these exact names:
 
 | File | Source | Content | Licence |
 |---|---|---|---|
-| `data/eco2mix-national-cons-def.csv` | [ODRÉ, dataset `eco2mix-national-cons-def`](https://odre.opendatasoft.com/explore/dataset/eco2mix-national-cons-def/) (RTE eCO2mix national, consolidated and definitive data). Export as CSV (`;` separator), filtered on 2024 | Consumption, generation by source, exchanges and CO2 intensity, France, 2024. 15-min rows (35,136), of which the 30-min steps are kept | Licence Ouverte / Open Licence v2.0 (Etalab) |
-| `data/RTE_PAD_emissions_co2_production_2026-11-06.csv` | RTE, monthly CO2 emissions of electricity generation by sector (Mt), downloaded on 2026-11-06 | Used to derive the 2024 emission factors (`sql/02_emission_factors.sql`) | TODO: check the licence on the RTE download page |
+| `data/eco2mix-national-cons-def.csv` | [ODRÉ, dataset `eco2mix-national-cons-def`](https://odre.opendatasoft.com/explore/dataset/eco2mix-national-cons-def/) (RTE eCO2mix national, consolidated and definitive data). Export as CSV (`;` separator), filtered on 2024 | Consumption, generation by source, exchanges and CO2 intensity, France, 2024. 15-min rows (35,136), of which the 30-min steps are kept | [Licence Ouverte v2.0 (Etalab)](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf), as stated in the ODRÉ dataset metadata |
+| `data/RTE_PAD_emissions_co2_production_2026-11-06.csv` | RTE, monthly CO2 emissions of electricity generation by sector (Mt), downloaded on 2026-11-06 | Used to derive the 2024 emission factors (`sql/02_emission_factors.sql`) | No licence stated on the RTE page (checked on 2026-11-09). The file is not redistributed here: download it from RTE |
 
 Methodology of the CO2 indicator: [RTE, CO2 emissions per kWh generated in France](https://www.rte-france.com/donnees-publications/eco2mix-donnees-temps-reel/emissions-co2-par-kwh-produit-france).
 
