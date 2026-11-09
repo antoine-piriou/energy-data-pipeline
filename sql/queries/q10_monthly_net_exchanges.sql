@@ -1,0 +1,12 @@
+-- =============================================================================
+-- Q10 (optional) - Net import/export rate by month
+-- Target concept: conditional aggregation
+--
+-- Goal            : TODO
+-- Assumptions     : TODO
+-- Expected result : TODO (shape of the result, order of magnitude, nb of rows)
+--
+-- Usage: \i sql/queries/q10_monthly_net_exchanges.sql
+-- =============================================================================
+
+-- TODO

@@ -1,0 +1,12 @@
+-- =============================================================================
+-- Q9 (optional) - Correlation between consumption and wind generation
+-- Target concept: CORR()
+--
+-- Goal            : TODO
+-- Assumptions     : TODO
+-- Expected result : TODO (shape of the result, order of magnitude, nb of rows)
+--
+-- Usage: \i sql/queries/q09_consumption_wind_corr.sql
+-- =============================================================================
+
+-- TODO
