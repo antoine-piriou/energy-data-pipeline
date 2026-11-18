@@ -8,6 +8,8 @@ PostgreSQL, and 8 advanced SQL queries (window functions, CTEs, conditional
 aggregation, `generate_series`), each documented and reproducible, plus an index
 benchmark.
 
+Documentation drafted with AI assistance; SQL written and validated by the author
+
 ## Prerequisites
 
 - PostgreSQL 16 or later (developed on PostgreSQL 18), with the `psql` client
