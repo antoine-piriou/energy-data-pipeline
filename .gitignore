@@ -223,3 +223,5 @@ __marimo__/
 data/raw/*
 !data/raw/.gitkeep
 *.csv
+# Small CSV samples used by the tests
+!tests/fixtures/*.csv
