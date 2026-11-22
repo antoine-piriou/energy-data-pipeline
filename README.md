@@ -108,6 +108,13 @@ the index does not help Q1 to Q8. To replay it: `\i sql/03_index_benchmark.sql`
 - **Daylight saving time:** on 2024-03-31, the source adds fake 02:00 / 02:30
   rows; they are removed at load time. On 2024-10-27, the 02:00 / 02:30 summer
   time steps are absent from the source file (Q8 finds them).
+- **Raw layer keeps source quirks:** the Python ingestion writes the source
+  rows unchanged, one partition per UTC day. The 2024 backfill has 366
+  partitions and 35136 rows (366 x 96), checked by `scripts/count_backfill.py`
+  (run from the repo root). Two days differ from 96 rows because of daylight
+  saving time: 2024-03-31 has 100 (UTC 01:00-01:45 appear twice, once as the
+  non-existent local 02:xx) and 2024-10-27 has 92 (UTC 00:00-00:45, the first
+  local 02:xx, is missing). Cleaning happens later, not in the raw layer.
 - **Missing values:** empty cells become `NULL` (not measured), never 0.
 - **Emission factors:** derived from RTE's 2024 monthly emissions divided by the
   2024 eCO2mix generation of each source. Like RTE's own indicator, they count
