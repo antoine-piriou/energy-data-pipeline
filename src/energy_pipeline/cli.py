@@ -14,7 +14,7 @@ from types import ModuleType
 from energy_pipeline import config, storage
 from energy_pipeline.http import HttpError
 from energy_pipeline.logging_setup import setup_logging
-from energy_pipeline.sources import eco2mix, open_meteo
+from energy_pipeline.sources import eco2mix, entsoe, open_meteo
 
 logger = logging.getLogger(__name__)
 
@@ -22,6 +22,7 @@ logger = logging.getLogger(__name__)
 SOURCES: dict[str, ModuleType] = {
     "eco2mix": eco2mix,
     "open_meteo": open_meteo,
+    "entsoe": entsoe,
 }
 
 
