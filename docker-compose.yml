@@ -1,0 +1,21 @@
+# Local PostgreSQL for the pipeline. Credentials come from .env (never written here).
+services:
+  postgres:
+    image: postgres:17                      # pinned: same database in six months
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}       # left: name inside the container
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}  # right: value read from .env
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT}:5432"   # host IP : host port : container port
+    volumes:
+      - pgdata:/var/lib/postgresql/data     # volume name : folder inside the container
+    healthcheck:
+      # $$ keeps the $ for the container's shell instead of Compose
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  pgdata:                                   # named volume, default settings
