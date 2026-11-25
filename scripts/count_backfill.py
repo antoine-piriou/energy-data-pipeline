@@ -7,6 +7,7 @@ Prints:
 2. the total number of data rows (headers excluded);
 3. every day whose row count is not 96, with its count.
 """
+
 from pathlib import Path
 
 EXPECTED_ROWS_PER_DAY = 96  # 24 h x 4 quarter-hours

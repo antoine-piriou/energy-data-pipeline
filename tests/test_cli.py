@@ -6,13 +6,15 @@ from energy_pipeline import cli
 
 
 def test_date_range():
-    assert cli.date_range(date(2024,2,28), date(2024,2,28)) == [date(2024,2,28)]
+    assert cli.date_range(date(2024, 2, 28), date(2024, 2, 28)) == [date(2024, 2, 28)]
     expected = [date(2024, 2, 28), date(2024, 2, 29), date(2024, 3, 1), date(2024, 3, 2)]
     assert cli.date_range(date(2024, 2, 28), date(2024, 3, 2)) == expected
 
+
 def test_date_range_inverted():
     with pytest.raises(ValueError, match=".*is after.*"):
-        cli.date_range(date(2024,3,2), date(2024,2,28))
+        cli.date_range(date(2024, 3, 2), date(2024, 2, 28))
+
 
 # --- ingest: fake fetch, no network ---------------------------------------
 
